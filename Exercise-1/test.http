@@ -1,0 +1,28 @@
+##Get Employee data
+
+GET http://localhost:4004/odata/v4/employeeservice/Employee
+
+### add employee records
+
+POST http://localhost:4004/odata/v4/employeeservice/Employee
+Content-Type: application/json
+
+{ 
+      "name": "Chandrakala",
+      "address": "Hyd",
+      "department": "Tester",
+      "email": "chandrakala@gmail.com"
+       }
+
+### to update data
+
+PATCH http://localhost:4004/odata/v4/employeeservice/Employee(name='Chandu', ID='78f919ac-f3ca-42b0-a932-4ddd7dc3ab10')
+Content-Type: application/json
+
+{
+   "email": "chandu@gmail.com"  
+}
+
+### to delete data
+
+DELETE http://localhost:4004/odata/v4/employeeservice/Employee(name='Chandu', ID='78f919ac-f3ca-42b0-a932-4ddd7dc3ab10')
